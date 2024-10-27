@@ -3,17 +3,18 @@
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: url('/public/images/backgroundHome.jpg') center center/cover
-		no-repeat;
+	/* background: url('/public/images/backgroundHome.jpg') center center/cover
+		no-repeat; */
 }
 
 .upload-form-container {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.142);
 	padding: 30px;
 	border-radius: 12px;
 	max-width: 400px;
 	width: 100%;
 	text-align: center;
+	margin: 0;
 }
 
 .upload-title {
@@ -54,5 +55,5 @@
 }
 
 .upload-button:hover {
-	background-color: #ff9b3d;
+	background-color: #ff8225;
 }

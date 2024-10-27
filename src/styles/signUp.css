@@ -1,14 +1,30 @@
 .signup-page {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: url('/public/images/bionicRobot.png') center center/cover
-		no-repeat;
+}
+
+.background-image {
+	position: absolute;
+	left: -350px;
+	bottom: -200px;
+	width: 70%;
+}
+
+.background-cover {
+	opacity: 0.3;
+	z-index: -1;
+	max-width: 100%;
+	filter: blur(40px);
+	-webkit-filter: blur(40px);
 }
 
 .signup-form-container {
-	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	right: 250px;
+	background-color: rgba(116, 116, 116, 0.284);
 	padding: 30px;
 	border-radius: 12px;
 	max-width: 400px;
@@ -20,6 +36,7 @@
 	font-family: 'Italianno', cursive;
 	font-size: 2em;
 	color: #ccd0cf;
+	font-weight: normal;
 }
 
 .signup-subtitle {
@@ -30,36 +47,55 @@
 .signup-form-container input[type='text'],
 .signup-form-container input[type='email'],
 .signup-form-container input[type='password'] {
-	width: 100%;
+	width: 70%;
 	padding: 12px;
 	margin: 10px 0;
 	border-radius: 8px;
 	border: 1px solid #4a5c6a;
-	background-color: #253745;
-	color: #ccd0cf;
+	background-color: #ccd0cf;
+	color: #06141b;
 }
 
 .checkbox-group {
+	width: 80%;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	position: relative;
+	left: 45px;
 	color: #9ba8ab;
 	font-size: 0.9em;
+	text-align: left;
+}
+
+.checkBoxes {
+	margin: 8px 0;
 }
 
 .signup-button {
-	width: 100%;
+	width: 70%;
 	padding: 12px;
 	margin-top: 20px;
 	border: none;
-	border-radius: 8px;
+	border-radius: 30px;
 	background-color: #ff8225;
-	color: white;
+	color: #06141b;
 	font-size: 1em;
+	margin-bottom: 10px;
 	cursor: pointer;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
 }
 
 .signup-button:hover {
-	background-color: #ff9b3d;
+	background-color: #b43f3f;
+	color: white;
+	transition: 0.3s ease-in-out;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
 }
 
 .login-link {

@@ -34,14 +34,15 @@ const LogsPage = () => {
 				</thead>
 				<tbody>
 					{logs.map((log, index) => (
-						<tr
-							key={index}
-							className={log.status === 'threat' ? 'threat-row' : 'safe-row'}
-						>
+						<tr key={index}>
 							<td>{log.user}</td>
 							<td>{log.email}</td>
 							<td>{log.date}</td>
-							<td>{log.status}</td>
+							<td
+								className={log.status === 'threat' ? 'threat-row' : 'safe-row'}
+							>
+								{log.status}
+							</td>
 							<td>
 								{log.download && (
 									<button className="download-btn">Download</button>

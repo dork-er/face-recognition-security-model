@@ -67,6 +67,16 @@ const SignUp = () => {
 
 	return (
 		<div className="signup-page">
+			<img
+				src="/images/bionicRobot.png"
+				alt="robot"
+				className="background-image"
+			></img>
+			<img
+				src="/images/backgroundSignup.jpg"
+				alt="background"
+				className="background-cover"
+			></img>
 			<div className="signup-form-container">
 				<h2 className="signup-title">Register</h2>
 				<p className="signup-subtitle">Create your new account</p>
@@ -104,7 +114,7 @@ const SignUp = () => {
 						required
 					/>
 					<div className="checkbox-group">
-						<label>
+						<label className="checkBoxes">
 							<input
 								type="checkbox"
 								name="rememberMe"
@@ -113,7 +123,7 @@ const SignUp = () => {
 							/>
 							Remember me
 						</label>
-						<label>
+						<label className="checkBoxes">
 							<input
 								type="checkbox"
 								name="agreeToTerms"
