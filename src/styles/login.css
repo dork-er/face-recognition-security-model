@@ -1,0 +1,38 @@
+/* Login.css */
+body {
+	background-color: #06141b;
+	font-family: 'Inter', sans-serif;
+}
+
+.login-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.login-box {
+	background-color: #11212d;
+	padding: 2rem;
+	border-radius: 10px;
+	color: #9ba8ab;
+}
+
+.login-button {
+	background-color: #ff8225;
+	color: white;
+	padding: 10px;
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.signup-link {
+	margin-top: 10px;
+	color: #9ba8ab;
+}
+
+a {
+	color: #ff8225;
+}

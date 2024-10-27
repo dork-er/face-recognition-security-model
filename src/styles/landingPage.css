@@ -1,0 +1,83 @@
+/* src/components/styles/landingPage.css */
+.landing-page {
+	display: flex;
+	justify-content: center;
+	padding: 40px;
+	background-color: #06141b;
+}
+
+.card-container {
+	display: flex;
+	gap: 10px;
+}
+
+.card {
+	position: relative;
+	width: 300px;
+	height: 550px;
+	overflow: hidden;
+	border-radius: 12px;
+	background-color: #253745;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.live-capture-card {
+	background-color: #b43f3f;
+	width: 500px;
+}
+
+.live-capture-card img {
+	position: absolute;
+	left: -70px;
+}
+.upload-card {
+	background-color: #ff8225;
+}
+
+.logs-card {
+	background-color: #173b45;
+}
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	bottom: -10px;
+}
+
+.card-content {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ccd0cf;
+	text-align: center;
+}
+
+.card-content h3 {
+	margin-bottom: 10px;
+	font-family: 'Italianno', cursive;
+	font-size: 1.8em;
+}
+
+.card-content p {
+	margin-bottom: 20px;
+	text-wrap: wrap;
+}
+
+.card-button {
+	padding: 8px 16px;
+	background-color: #06141b;
+	color: white;
+	border: none;
+	border-radius: 15px;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+}

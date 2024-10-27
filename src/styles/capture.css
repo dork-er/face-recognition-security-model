@@ -1,0 +1,52 @@
+.capture-page {
+	text-align: center;
+	color: #ccd0cf;
+	background-color: #06141b;
+	padding: 2rem;
+	min-height: 100vh;
+}
+
+.video-container {
+	margin: 20px auto;
+	width: 80%;
+	max-width: 600px;
+	height: auto;
+	background-color: transparent;
+	padding: 10px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+video {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.controls {
+	margin-top: 20px;
+}
+
+.start-button,
+.stop-button {
+	padding: 0.5rem 1.5rem;
+	font-size: 1rem;
+	color: #fff;
+	background-color: #ff8225;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.stop-button {
+	background-color: #b43f3f;
+}
+
+.start-button:hover,
+.stop-button:hover {
+	background-color: #ff6725;
+}

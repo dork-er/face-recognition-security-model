@@ -1,0 +1,83 @@
+.signup-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: url('/public/images/bionicRobot.png') center center/cover
+		no-repeat;
+}
+
+.signup-form-container {
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 30px;
+	border-radius: 12px;
+	max-width: 400px;
+	width: 100%;
+	text-align: center;
+}
+
+.signup-title {
+	font-family: 'Italianno', cursive;
+	font-size: 2em;
+	color: #ccd0cf;
+}
+
+.signup-subtitle {
+	color: #9ba8ab;
+	margin-bottom: 20px;
+}
+
+.signup-form-container input[type='text'],
+.signup-form-container input[type='email'],
+.signup-form-container input[type='password'] {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	border-radius: 8px;
+	border: 1px solid #4a5c6a;
+	background-color: #253745;
+	color: #ccd0cf;
+}
+
+.checkbox-group {
+	display: flex;
+	justify-content: space-between;
+	color: #9ba8ab;
+	font-size: 0.9em;
+}
+
+.signup-button {
+	width: 100%;
+	padding: 12px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 8px;
+	background-color: #ff8225;
+	color: white;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.signup-button:hover {
+	background-color: #ff9b3d;
+}
+
+.login-link {
+	margin-top: 15px;
+	font-size: 0.9em;
+	color: #ccd0cf;
+}
+
+.login-link a {
+	color: #ff8225;
+}
+
+.error-message {
+	color: red;
+	margin-top: 8px;
+}
+
+.success-message {
+	color: green;
+	margin-top: 8px;
+}

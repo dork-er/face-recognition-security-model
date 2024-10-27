@@ -1,0 +1,22 @@
+/* src/components/styles/navbar.css */
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px;
+	background-color: #06141b;
+	margin-bottom: 10px;
+	border-bottom-style: solid;
+	border-color: #ccd0cf;
+	border-width: 2px;
+	min-height: 40px;
+}
+
+.navbar-logo img {
+	height: 40px;
+}
+
+.navbar-profile img {
+	height: 40px;
+	border-radius: 50%;
+}
