@@ -1,0 +1,128 @@
+/* Login.css */
+body {
+	background-color: #06141b;
+	font-family: 'Inter', sans-serif;
+}
+
+.login-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.login-title {
+	font-family: 'Italianno', cursive;
+	font-size: 2em;
+	font-weight: normal;
+	color: #ccd0cf;
+}
+
+.background-image {
+	position: absolute;
+	left: -350px;
+	bottom: -200px;
+	width: 70%;
+}
+
+.background-cover {
+	opacity: 0.3;
+	z-index: -1;
+	max-width: 100%;
+	filter: blur(40px);
+	-webkit-filter: blur(40px);
+}
+
+.login-box {
+	position: absolute;
+	right: 250px;
+	background-color: rgba(116, 116, 116, 0.284);
+	padding: 2rem;
+	color: #9ba8ab;
+	/* padding: 30px; */
+	border-radius: 12px;
+	max-width: 400px;
+	width: 100%;
+	text-align: center;
+}
+
+.login-box input[type='text'],
+.login-box input[type='password'] {
+	width: 70%;
+	padding: 12px;
+	margin: 10px 0;
+	border-radius: 8px;
+	border: 1px solid #4a5c6a;
+	background-color: #ccd0cf;
+	color: #06141b;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+}
+
+input:focus {
+	outline: none;
+	border: none;
+}
+
+.remember-forgot {
+	margin: 20px 0px 20px;
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+	left: 45px;
+	color: #9ba8ab;
+	font-size: 0.9em;
+	text-align: left;
+}
+
+.signup-link {
+	margin-top: 10px;
+	color: #9ba8ab;
+}
+
+a {
+	color: #ff8225;
+}
+
+.login-button {
+	width: 70%;
+	padding: 12px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 30px;
+	background-color: #ff8225;
+	color: #06141b;
+	font-size: 1em;
+	margin-bottom: 10px;
+	cursor: pointer;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+}
+
+.login-button:hover {
+	transition: 0.3s ease-in-out;
+	background-color: #b43f3f;
+	color: white;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+}
+
+.login-link {
+	margin-top: 15px;
+	font-size: 0.9em;
+	color: #ccd0cf;
+	font-size: 14px;
+}
+
+.login-link p a {
+	color: #ff8225;
+}
