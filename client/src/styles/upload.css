@@ -1,0 +1,95 @@
+.upload-page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.back-icon {
+	position: absolute;
+	top: 100px;
+	left: 50px;
+	font-size: 2em;
+	color: #ccd0cf;
+	cursor: pointer;
+	width: 3rem;
+}
+
+.background-cover {
+	opacity: 0.1;
+	z-index: -1;
+	max-width: 100%;
+	filter: blur(40px);
+	-webkit-filter: blur(40px);
+}
+
+.upload-form-container {
+	margin-top: 80px;
+	background-color: rgba(105, 105, 105, 0.219);
+	padding: 80px;
+	border-radius: 30px;
+	max-width: 400px;
+	width: 100%;
+	text-align: center;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+}
+
+.upload-title {
+	font-size: 1.8em;
+	color: #ccd0cf;
+}
+
+.upload-box {
+	border: 2px dashed #ffffff;
+	border-spacing: 2px;
+	border-radius: 8px;
+	padding: 30px;
+	color: #9ba8ab;
+	background-color: #4a5c6a68;
+	margin: 20px 0;
+	cursor: pointer;
+}
+
+.upload-label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.upload-label p {
+	font-size: 14px;
+	color: #ccd0cf;
+}
+
+.upload-icon {
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
+.upload-button {
+	width: 50%;
+	padding: 12px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 30px;
+	background-color: #ff8225;
+	color: white;
+	font-size: 1em;
+	cursor: pointer;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+}
+
+.upload-button:hover {
+	background-color: #b43f3f;
+	color: white;
+	transition: 0.3s ease-in-out;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+}
