@@ -14,6 +14,8 @@ import Logs from './components/logsPage';
 import Upload from './components/upload';
 import Navbar from './components/navbar';
 import Capture from './components/capture';
+import ProtectedRoute from './components/protectedRoute';
+import Profile from './components/profile';
 
 const App = () => {
 	const location = useLocation();
@@ -24,13 +26,16 @@ const App = () => {
 		<div>
 			{!hideNavbar && <Navbar />}
 			<Routes>
-				<Route path="/" element={<LandingPage />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/signup" element={<SignUp />} />
-				<Route path="/landing" element={<LandingPage />} />
-				<Route path="/capture" element={<Capture />} />
-				<Route path="/upload" element={<Upload />} />
-				<Route path="/logs" element={<Logs />} />
+				<Route element={<ProtectedRoute />}>
+					<Route path="/" element={<LandingPage />} />
+					<Route path="/landing" element={<LandingPage />} />
+					<Route path="/capture" element={<Capture />} />
+					<Route path="/upload" element={<Upload />} />
+					<Route path="/logs" element={<Logs />} />
+					<Route path="/profile" element={<Profile />} />
+				</Route>
 			</Routes>
 		</div>
 	);

@@ -46,6 +46,8 @@ const Login = () => {
 				const data = await response.json();
 				console.log(data.message);
 				setError(''); // Clear any previous errors
+				// store token to localStorage
+				localStorage.setItem('token', data.token);
 				// Redirect to the landing page
 				navigate('/landing');
 			} else {
@@ -79,6 +81,7 @@ const Login = () => {
 			></img>
 			<div className="login-box">
 				<h1 className="login-title">Welcome Back</h1>
+				<p className="login-subtitle">Log into your account</p>
 				<form onSubmit={handleSubmit}>
 					<input
 						type="text"
@@ -98,11 +101,13 @@ const Login = () => {
 					/>
 					{error && <p className="error-message">{error}</p>}
 					<div className="remember-forgot">
-						<label>
-							<input type="checkbox" /> Remember me
-						</label>
-						<br />
-						<a href="./components/forgotPassword">Forgot password?</a>
+						<div style={{ whiteSpace: 'nowrap' }}>
+							<label className="checkboxes">
+								<input type="checkbox" />
+								Remember me
+							</label>
+						</div>
+						<a href="/forgotPassword">Forgot password?</a>
 					</div>
 					<button type="submit" className="login-button">
 						Log In

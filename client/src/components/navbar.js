@@ -1,9 +1,10 @@
-// src/components/Navbar.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/navbar.css';
 
 const Navbar = () => {
+	const navigate = useNavigate();
+
 	return (
 		<nav className="navbar">
 			<div className="navbar-logo">
@@ -12,7 +13,12 @@ const Navbar = () => {
 				</Link>
 			</div>
 			<div className="navbar-profile">
-				<img src="/logo512.png" alt="Profile" />
+				<img
+					src="/logo512.png"
+					alt="Profile"
+					onClick={() => navigate('/profile')}
+					style={{ cursor: 'pointer' }}
+				/>
 			</div>
 		</nav>
 	);

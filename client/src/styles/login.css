@@ -1,7 +1,7 @@
 /* Login.css */
 body {
 	background-color: #06141b;
-	font-family: 'Inter', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .login-container {
@@ -17,6 +17,13 @@ body {
 	font-size: 2em;
 	font-weight: normal;
 	color: #ccd0cf;
+	margin-bottom: 0;
+}
+
+.login-subtitle {
+	color: #9ba8ab;
+	margin-bottom: 20px;
+	font-weight: lighter;
 }
 
 .background-image {
@@ -78,6 +85,14 @@ input:focus {
 	color: #9ba8ab;
 	font-size: 0.9em;
 	text-align: left;
+}
+
+.remember-forgot input[type='checkbox'] {
+	margin-right: none;
+}
+
+.remember-forgot label {
+	margin-left: none;
 }
 
 .signup-link {

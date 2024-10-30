@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/upload.css';
 
 const Upload = () => {
+	const navigate = useNavigate();
 	const [file, setFile] = useState(null);
 
 	const handleFileChange = (e) => {
@@ -16,7 +18,9 @@ const Upload = () => {
 
 	return (
 		<div className="upload-page">
-			<img src="/logo192.png" alt="back" className="back-icon"></img>
+			<button onClick={() => navigate(-1)} className="back-button">
+				<img src="/logo192.png" alt="back" className="back-icon"></img>
+			</button>
 			<div className="upload-form-container">
 				<h2 className="upload-title">File Upload</h2>
 				<div className="upload-box">

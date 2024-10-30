@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/signUp.css';
 
 const SignUp = () => {
@@ -162,6 +162,7 @@ const SignUp = () => {
 			></img>
 			<div className="signup-form-container">
 				<h2 className="signup-title">Register</h2>
+				<p className="signup-subtitle">Create your new account.</p>
 				<form onSubmit={handleSubmit}>
 					<input
 						type="text"

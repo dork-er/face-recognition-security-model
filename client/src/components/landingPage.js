@@ -20,7 +20,10 @@ const LandingPage = () => {
 							This is where you can interact with the face recognition model in
 							real-time.
 						</p>
-						<Link to="/capture" className="card-button">
+						<Link
+							to="/capture"
+							className="card-button live-capture-card-button"
+						>
 							Go
 						</Link>
 					</div>
@@ -31,7 +34,7 @@ const LandingPage = () => {
 					<div className="card-content">
 						<h3>Upload</h3>
 						<p>Upload images or videos for forensic analysis.</p>
-						<Link to="/upload" className="card-button">
+						<Link to="/upload" className="card-button upload-card-button">
 							Upload
 						</Link>
 					</div>
@@ -45,7 +48,7 @@ const LandingPage = () => {
 							See all the previous sessions here for a detailed view of previous
 							interactions.
 						</p>
-						<Link to="/logs" className="card-button">
+						<Link to="/logs" className="card-button logs-card-button">
 							Logs
 						</Link>
 					</div>

@@ -1,3 +1,7 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
 .signup-page {
 	position: relative;
 	display: flex;
@@ -38,11 +42,13 @@
 	font-size: 2em;
 	color: #ccd0cf;
 	font-weight: normal;
+	margin-bottom: 0;
 }
 
 .signup-subtitle {
 	color: #9ba8ab;
 	margin-bottom: 20px;
+	font-weight: 400px;
 }
 
 .signup-form-container input[type='text'],
@@ -52,7 +58,7 @@
 	padding: 12px;
 	margin: 10px 0;
 	border-radius: 8px;
-	border: 0px solid #4a5c6a;
+	border: 0px solid #ccd0cf;
 	background-color: #ccd0cf;
 	color: #06141b;
 }
@@ -71,6 +77,13 @@ input:focus {
 	text-align: left;
 }
 
+.checkbox-group input[type='checkbox'] {
+	margin-right: none;
+}
+
+.checkbox-group label {
+	margin-left: none;
+}
 .checkBoxes {
 	margin: 8px 0;
 }
