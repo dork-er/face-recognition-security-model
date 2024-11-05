@@ -11,6 +11,11 @@ const LandingPage = () => {
 				alt="background"
 				className="background-cover"
 			/>
+			<img
+				src="/images/friendlyRobot.png"
+				alt="robot"
+				className="robot-image"
+			></img>
 			<div className="card-container">
 				<div className="card live-capture-card">
 					<img src="/images/bionicRobot.png" alt="Live Capture" />

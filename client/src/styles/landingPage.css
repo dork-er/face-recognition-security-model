@@ -180,3 +180,46 @@ p {
 	-o-transition: all 0.5s ease-in-out;
 	-webkit-filter: blur(0.5px);
 }
+
+.card:not(:hover) {
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+
+.robot-image {
+	position: absolute;
+	right: 20px;
+	bottom: 30px;
+	transform: scale(1);
+	width: 100px;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+}
+
+.robot-image:hover {
+	cursor: pointer;
+	transform: scale(1.4);
+	bottom: 40px;
+	transition: 0.3s ease-in-out;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	-webkit-transform: scale(1.4);
+	-moz-transform: scale(1.4);
+	-ms-transform: scale(1.4);
+	-o-transform: scale(1.4);
+}
+
+.robot-image:not(:hover) {
+	transition: 0.3s ease-in-out;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-ms-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+}

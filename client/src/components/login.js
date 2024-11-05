@@ -27,7 +27,6 @@ const Login = () => {
 			return;
 		}
 
-		console.log(formData);
 		const { identifier, password } = formData;
 
 		try {
@@ -44,7 +43,6 @@ const Login = () => {
 
 			if (response.ok) {
 				const data = await response.json();
-				console.log(data.message);
 				setError(''); // Clear any previous errors
 				// store token to localStorage
 				localStorage.setItem('token', data.token);
@@ -78,6 +76,11 @@ const Login = () => {
 				src="/images/backgroundSignup.jpg"
 				alt="background"
 				className="background-cover"
+			></img>
+			<img
+				src="/images/friendlyRobot.png"
+				alt="robot"
+				className="robot-image"
 			></img>
 			<div className="login-box">
 				<h1 className="login-title">Welcome Back</h1>
