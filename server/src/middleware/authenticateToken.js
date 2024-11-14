@@ -1,4 +1,5 @@
-import { verify } from 'jsonwebtoken';
+// import { verify } from 'jsonwebtoken';
+const verify = require('jsonwebtoken').verify;
 const JWT_SECRET = process.env.JWT_SECRET; // Ensure you have a secret key in your environment variables
 
 const authenticateToken = (req, res, next) => {

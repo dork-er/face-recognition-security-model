@@ -13,27 +13,27 @@ import ProtectedRoute from './components/protectedRoute';
 import Profile from './components/profile';
 
 const App = () => {
-	const location = useLocation();
-	const hideNavbar =
-		location.pathname === '/login' || location.pathname === '/signup';
+  const location = useLocation();
+  const hideNavbar =
+    location.pathname === '/login' || location.pathname === '/signup';
 
-	return (
-		<div>
-			{!hideNavbar && <Navbar />}
-			<Routes>
-				<Route path="/login" element={<Login />} />
-				<Route path="/signup" element={<SignUp />} />
-				<Route element={<ProtectedRoute />}>
-					<Route path="/" element={<LandingPage />} />
-					<Route path="/landing" element={<LandingPage />} />
-					<Route path="/capture" element={<Capture />} />
-					<Route path="/upload" element={<Upload />} />
-					<Route path="/logs" element={<Logs />} />
-					<Route path="/profile" element={<Profile />} />
-				</Route>
-			</Routes>
-		</div>
-	);
+  return (
+    <div>
+      {!hideNavbar && <Navbar />}
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/landing" element={<LandingPage />} />
+          <Route path="/capture" element={<Capture />} />
+          <Route path="/upload" element={<Upload />} />
+          <Route path="/logs" element={<Logs />} />
+          <Route path="/profile" element={<Profile />} />
+        </Route>
+      </Routes>
+    </div>
+  );
 };
 
 export default App;
