@@ -36,4 +36,4 @@
   - The forgot password component.
   - Enter code component.
   - New Password component.
-- [ ] Make the remember checkbox functional.
+- [ ] Make the remember checkbox functional

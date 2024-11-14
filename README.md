@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Face Recognition Security System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an undergraduate-level face recognition security system designed for authentication and surveillance purposes. The system leverages machine learning and deep learning techniques to recognize and verify individuals' faces, enhancing security in environments such as universities, offices, and restricted areas.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Authentication**: Secure login and registration system with unique user credentials.
+- **Real-Time Face Recognition**: Identifies and verifies faces from a live video feed, ensuring only recognized individuals are granted access.
+- **Profile Management**: Users can update their personal information, upload, and change their profile image.
+- **Forensic Analysis**: Supports forensic analysis of uploaded images and videos for investigative purposes.
+- **Access Logs**: Maintains a record of all recognized and unrecognized faces, including timestamps, for auditing.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js for building a responsive and interactive user interface.
+- **Backend**: Node.js and Express.js to manage API endpoints and handle data processing.
+- **Machine Learning**: Haarcascade, mtcnn and FaceNet models for face detection and recognition.
+- **Database**: MongoDB for storing user profiles, access logs, and media files.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js and npm installed on your machine.
+- MongoDB database configured and accessible.
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/your-username/face-recognition-security-system.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
 
-### `npm run eject`
+   ```bash
+   cd face-recognition-security-system
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd client && npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Set up environment variables for database connections, JWT secrets, and other configurations in a `.env` file.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Run the development server:
+   ```bash
+   cd client && npm run dev
+   ```
+6. Set up the backend server:
+   ```bash
+   cd server && npm install
+   ```
+7. Run the backend server:
+   ```bash
+   cd server && node src/app.js
+   ```
 
-## Learn More
+### Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Register or log in to access the dashboard.
+2. Use the profile page to manage personal information and upload a profile picture.
+3. View access logs and perform forensic analysis on uploaded media files.
+4. Use the live feed for real-time face recognition.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future Enhancements
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Enhanced Security Measures**: Implement two-factor authentication for higher security.
+- **Improved Face Recognition Accuracy**: Integrate additional machine learning models to improve recognition rates.
+- **User Notification System**: Notify users in real-time when their profile is accessed or modified.
