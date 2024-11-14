@@ -8,7 +8,7 @@ module.exports = function override(config) {
 		path: require.resolve('path-browserify'),
 		crypto: require.resolve('crypto-browserify'),
 		stream: require.resolve('stream-browserify'),
-		process: require.resolve('process/browser'),
+		process: require.resolve('process/browser.js'),
 		http: require.resolve('stream-http'),
 		buffer: require.resolve('buffer'),
 		util: require.resolve('util'),
@@ -19,11 +19,11 @@ module.exports = function override(config) {
 		net: false,
 	};
 
-	config.plugins.push(
+	config.plugins = (config.plugins || []).concat([
 		new webpack.ProvidePlugin({
-			process: 'process/browser',
-		})
-	);
+			process: 'process/browser.js',
+		}),
+	]);
 
 	return config;
 };

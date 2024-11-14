@@ -1,22 +1,68 @@
 /* src/components/styles/navbar.css */
 .navbar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 10px 20px;
-	background-color: #06141b;
-	margin-bottom: 10px;
-	border-bottom-style: solid;
-	border-color: #ccd0cf;
-	border-width: 2px;
-	min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #06141b;
+  margin-bottom: 10px;
+  border-bottom-style: solid;
+  border-color: #ccd0cf;
+  border-width: 2px;
+  min-height: 40px;
 }
 
 .navbar-logo img {
-	height: 40px;
+  height: 40px;
 }
 
 .navbar-profile img {
-	height: 40px;
-	border-radius: 50%;
+  object-fit: cover;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.navbar-profile {
+  position: relative;
+  object-fit: fill;
+}
+
+.profile-icon {
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  background-color: #173b45;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 10;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 10px 20px;
+  color: #ccd0cf;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #ff8225;
+  color: #06141b;
 }
