@@ -48,7 +48,7 @@ This project is an undergraduate-level face recognition security system designed
 
 5. Run the development server:
    ```bash
-   cd client && npm run dev
+   cd client && npm start
    ```
 6. Set up the backend server:
    ```bash
