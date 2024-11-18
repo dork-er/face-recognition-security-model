@@ -1,0 +1,153 @@
+/* General */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #06141B;
+  color: #CCD0CF;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #11212D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #CCD0CF;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar nav ul li {
+  padding: 15px;
+  cursor: pointer;
+  text-align: center;
+  color: #CCD0CF;
+  transition: background-color 0.3s;
+}
+
+.sidebar nav ul li.active,
+.sidebar nav ul li:hover {
+  background-color: #253745;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #06141B;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  color: #CCD0CF;
+}
+
+.header .profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #4A5C6A;
+}
+
+/* Report Section */
+.report-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #11212D;
+  padding: 20px;
+  flex: 1;
+  border-radius: 10px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  color: #CCD0CF;
+}
+
+.download-btn {
+  background-color: #FF8225;
+  color: #06141B;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #B43F3F;
+}
+
+/* Recent Activity Section */
+.recent-activity h2 {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #11212D;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 15px;
+  text-align: left;
+}
+
+table th {
+  background-color: #253745;
+  color: #CCD0CF;
+}
+
+table td {
+  color: #CCD0CF;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.threat {
+  color: #B43F3F;
+}
+
+.status.safe {
+  color: #4A5C6A;
+}
+
+table tr:hover {
+  background-color: #173B45;
+}
