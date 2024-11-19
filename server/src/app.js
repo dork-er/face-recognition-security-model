@@ -5,6 +5,7 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
 const userUpdateRoutes = require('./routes/userRoutes');
 require('dotenv').config();
+// const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 
@@ -24,3 +25,12 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+// app.use(
+//   '/flask',
+//   createProxyMiddleware({
+//     target: 'http://127.0.0.1:5001', // Flask microservice
+//     changeOrigin: true,
+//     pathRewrite: { '^/flask': '' }, // Removes '/flask' prefix
+//   })
+// );
