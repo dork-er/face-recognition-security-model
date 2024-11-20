@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast'; // Import toast for alerts
 import '../styles/profile.css';
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
 const Profile = () => {
   const [userData, setUserData] = useState({
     username: '',
@@ -21,7 +23,7 @@ const Profile = () => {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/user/profile', {
+        const response = await axios.get(`${backendUrl}/user/profile`, {
           headers: { Authorization: token ? `Bearer ${token}` : '' },
         });
         setUserData(response.data);
@@ -41,7 +43,7 @@ const Profile = () => {
       try {
         const token = localStorage.getItem('token');
         const response = await axios.put(
-          'http://localhost:5000/user/profile/uploadImage',
+          `${backendUrl}/user/profile/uploadImage`,
           formData,
           {
             headers: {
@@ -83,7 +85,7 @@ const Profile = () => {
       console.log(updatedFields);
       // Check for unique email and username
       const uniqueCheckResponse = await axios.post(
-        'http://localhost:5000/user/validate',
+        `${import.meta.env.backendUrl}/user/validate`,
         updatedFields,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -95,7 +97,7 @@ const Profile = () => {
 
       // Proceed to update only the changed fields
       await axios.put(
-        'http://localhost:5000/user/profile/update',
+        `${import.meta.env.backendUrl}/user/profile/update`,
         updatedFields,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -120,7 +122,7 @@ const Profile = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        'http://localhost:5000/user/profile/security',
+        `${import.meta.env.backendUrl}/user/profile/security`,
         { password: passwordData.password },
         { headers: { Authorization: `Bearer ${token}` } }
       );

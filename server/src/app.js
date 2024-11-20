@@ -1,16 +1,17 @@
-const express = require('express');
-const cors = require('cors');
-const connectDB = require('./config/db');
-const authRoutes = require('./routes/auth');
-const userRoutes = require('./routes/user');
-const userUpdateRoutes = require('./routes/userRoutes');
-require('dotenv').config();
-// const { createProxyMiddleware } = require('http-proxy-middleware');
+import express from 'express';
+import cors from 'cors';
+import connectDB from './config/db.js';
+import authRoutes from './routes/auth.js';
+import userRoutes from './routes/user.js';
+import userUpdateRoutes from './routes/userRoutes.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
 // Middleware
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: `${process.env.FRONTEND_URL}` }));
 app.use(express.json());
 
 // Routes
@@ -25,12 +26,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-// app.use(
-//   '/flask',
-//   createProxyMiddleware({
-//     target: 'http://127.0.0.1:5001', // Flask microservice
-//     changeOrigin: true,
-//     pathRewrite: { '^/flask': '' }, // Removes '/flask' prefix
-//   })
-// );

@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios'; // Axios for HTTP requests
 import '../styles/navbar.css';
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [profileImage, setProfileImage] = useState('/images/avatar.png'); // Default avatar path
@@ -34,7 +36,7 @@ const Navbar = () => {
     const fetchProfileImage = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/user/profile', {
+        const response = await axios.get(`${backendUrl}/user/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

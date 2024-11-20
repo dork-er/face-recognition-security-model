@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import '../styles/signUp.css';
 import { useNavigate } from 'react-router-dom';
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
 const SignUp = () => {
   const [formData, setFormData] = useState({
     username: '',
@@ -61,16 +63,13 @@ const SignUp = () => {
     if (!value) return;
 
     try {
-      const response = await fetch(
-        'http://localhost:5000/auth/checkAvailability',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ [field]: value }),
-        }
-      );
+      const response = await fetch(`${backendUrl}/auth/checkAvailability`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ [field]: value }),
+      });
 
       if (response.status === 409) {
         const data = await response.json();
@@ -117,7 +116,7 @@ const SignUp = () => {
     setSuccess(''); // Clear any previous success message
 
     try {
-      const response = await fetch('http://localhost:5000/auth/signup', {
+      const response = await fetch(`${backendUrl}/auth/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -160,7 +159,7 @@ const SignUp = () => {
     formData.append('image', imageFile);
 
     try {
-      const response = await fetch('http://localhost:5000/user/uploadImage', {
+      const response = await fetch(`${backendUrl}/user/uploadImage`, {
         method: 'POST',
         body: formData,
       });
@@ -192,7 +191,7 @@ const SignUp = () => {
 
   const saveImageId = async (imageId) => {
     try {
-      await fetch('http://localhost:5000/user/updateImageId', {
+      await fetch(`${backendUrl}/user/updateImageId`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
