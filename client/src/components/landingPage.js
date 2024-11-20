@@ -30,7 +30,7 @@ const LandingPage = () => {
               real-time.
             </p>
             <Link
-              to="/capture"
+              to="https://face-recognition-security-model.streamlit.app/"
               className="card-button live-capture-card-button"
             >
               Go
@@ -43,9 +43,17 @@ const LandingPage = () => {
           <div className="card-content">
             <h3>Upload</h3>
             <p>Upload images or videos for forensic analysis.</p>
-            <Link to="/upload" className="card-button upload-card-button">
+            <a
+              href="https://face-recognition-security-model.streamlit.app/"
+              className="card-button live-capture-card-button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Upload
-            </Link>
+            </a>
+            {/* <Link to="/upload" className="card-button upload-card-button">
+              Upload
+            </Link> */}
           </div>
         </div>
 
