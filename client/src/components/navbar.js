@@ -65,7 +65,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/">
-          <img src="/logo512.png" alt="Logo" />
+          <img src="/icons/shield.png" alt="Logo" />
         </Link>
       </div>
       <div className="navbar-profile" ref={dropdownRef}>
