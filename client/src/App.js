@@ -12,6 +12,7 @@ import Capture from './components/capture';
 import ProtectedRoute from './components/protectedRoute';
 import Profile from './components/profile';
 import Dashboard from './components/dashboard';
+import UserList from './components/userList';
 const App = () => {
   const location = useLocation();
   const hideNavbar =
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/logs" element={<Logs />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/users" element={<UserList />} />
         </Route>
       </Routes>
     </div>

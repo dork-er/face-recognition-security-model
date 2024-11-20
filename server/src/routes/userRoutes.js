@@ -10,6 +10,7 @@ const verifyToken = require('../middleware/verifyToken');
 const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
+const User = require('../models/User');
 
 // Define the upload directory path
 const uploadDir = path.join(__dirname, '..', 'uploads');

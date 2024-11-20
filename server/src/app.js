@@ -4,6 +4,7 @@ import connectDB from './config/db.js';
 import authRoutes from './routes/auth.js';
 import userRoutes from './routes/user.js';
 import userUpdateRoutes from './routes/userRoutes.js';
+import userManagement from './routes/userManagement.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -19,6 +20,7 @@ app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 app.use('/user', userUpdateRoutes);
 app.use('/uploads', express.static('uploads'));
+app.use('/api/users', userManagement);
 
 // Database and Server Setup
 connectDB();

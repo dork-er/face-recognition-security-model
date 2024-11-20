@@ -6,11 +6,11 @@ import '../styles/landingPage.css';
 const LandingPage = () => {
   return (
     <div className="landing-page">
-      <img
+      {/* <img
         src="/images/backgroundSignup.jpg"
         alt="background"
         className="background-cover"
-      />
+      /> */}
       <img
         src="/images/friendlyRobot.png"
         alt="robot"
