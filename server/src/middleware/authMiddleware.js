@@ -1,17 +1,6 @@
-// server/src/middleware/authMiddleware.js
-const jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
 
-const verifyRole = (role) => {
-  return (req, res, next) => {
-    const userRole = req.user.role; // Assume `req.user` is set by your authentication middleware
-    if (userRole !== role) {
-      return res.status(403).json({ error: 'Access denied' });
-    }
-    next();
-  };
-};
-
-const authMiddleware = (req, res, next) => {
+const authMiddleware = async (req, res, next) => {
   // Get token from the request header
   const token = req.headers.authorization?.split(' ')[1];
   // console.log(token);
@@ -34,4 +23,13 @@ const authMiddleware = (req, res, next) => {
   }
 };
 
-module.exports = { authMiddleware, verifyRole };
+const verifyRole = (roles) => {
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role)) {
+      return res.status(403).json({ message: 'Access denied' });
+    }
+    next();
+  };
+};
+
+export { authMiddleware, verifyRole };

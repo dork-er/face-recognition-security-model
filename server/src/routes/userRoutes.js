@@ -1,16 +1,19 @@
-const express = require('express');
+import express from 'express';
+import multer from 'multer';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import userController from '../controllers/userController.js';
+import verifyToken from '../middleware/verifyToken.js';
+
+const { updateUserInfo, updatePassword, validateUnique, uploadImage } =
+  userController;
+
 const router = express.Router();
-const {
-  updateUserInfo,
-  updatePassword,
-  validateUnique,
-  uploadImage,
-} = require('../controllers/userController');
-const verifyToken = require('../middleware/verifyToken');
-const multer = require('multer');
-const fs = require('fs');
-const path = require('path');
-const User = require('../models/User');
+
+// Convert import.meta.url to __dirname equivalent
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Define the upload directory path
 const uploadDir = path.join(__dirname, '..', 'uploads');
@@ -50,6 +53,7 @@ router.put('/profile/update', verifyToken, updateUserInfo);
 // Route to update password
 router.put('/profile/security', verifyToken, updatePassword);
 
+// Route to validate unique email and username
 router.post('/validate', verifyToken, validateUnique);
 
-module.exports = router;
+export default router;

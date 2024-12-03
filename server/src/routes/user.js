@@ -1,12 +1,12 @@
-const express = require('express');
-const multer = require('multer');
-const router = express.Router();
-const Image = require('../models/Image');
-const User = require('../models/User');
-// const authenticateToken = require('../middleware/authenticateToken').default;
-const authMiddleware = require('../middleware/authMiddleware');
+import express from 'express';
+import multer from 'multer';
+import Image from '../models/Image.js';
+import User from '../models/User.js';
+import { authMiddleware } from '../middleware/authMiddleware.js';
+
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
+const router = express.Router();
 
 // Route to upload an image
 router.post('/uploadImage', upload.single('image'), async (req, res) => {
@@ -25,15 +25,15 @@ router.post('/uploadImage', upload.single('image'), async (req, res) => {
 router.post('/updateImageId', async (req, res) => {
   const { email, image_id } = req.body;
   try {
-    const updatedUser = await User.findOneAndUpdate(
+    const user = await User.findOneAndUpdate(
       { email },
       { profileImage: image_id },
       { new: true }
     );
-    if (!updatedUser) {
+    if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
-    res.status(200).json({ message: 'Profile image updated successfully.' });
+    res.status(200).json(user);
   } catch (error) {
     res
       .status(500)
@@ -41,12 +41,11 @@ router.post('/updateImageId', async (req, res) => {
   }
 });
 
+// Route to get user profile
 router.get('/profile', authMiddleware, async (req, res) => {
   try {
     const userId = req.user.id; // authMiddleware sets the req.user object with the user ID
-
     const user = await User.findById(userId).populate('profileImage');
-
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
@@ -70,4 +69,4 @@ router.get('/profile', authMiddleware, async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

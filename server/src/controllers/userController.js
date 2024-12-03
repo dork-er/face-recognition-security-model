@@ -1,7 +1,7 @@
-const User = require('../models/User');
-const bcrypt = require('bcryptjs');
-const Image = require('../models/Image');
-const fs = require('fs');
+import User from '../models/User.js';
+import bcrypt from 'bcryptjs';
+import Image from '../models/Image.js';
+import fs from 'fs';
 
 const updateUserInfo = async (req, res) => {
   const userId = req.user.userId; // assuming verifyToken middleware attaches `userId`
@@ -141,7 +141,7 @@ const uploadImage = async (req, res) => {
   }
 };
 
-module.exports = {
+export default {
   updateUserInfo,
   updatePassword,
   validateUnique,

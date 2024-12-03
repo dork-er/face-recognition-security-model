@@ -1,5 +1,4 @@
 import React from 'react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 
@@ -14,6 +13,7 @@ import ProtectedRoute from './components/protectedRoute';
 import Profile from './components/profile';
 import Dashboard from './components/dashboard';
 import UserList from './components/userList';
+
 const App = () => {
   const location = useLocation();
   const hideNavbar =

@@ -1,7 +1,6 @@
-// server/routes/userRoutes.js
-const express = require('express');
-const bcrypt = require('bcrypt');
-const User = require('../models/User');
+import express from 'express';
+import bcrypt from 'bcrypt';
+import User from '../models/User.js';
 const router = express.Router();
 
 // Get all users
@@ -46,4 +45,4 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
