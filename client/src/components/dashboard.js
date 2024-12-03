@@ -1,5 +1,5 @@
-import React from "react";
-import "../styles/dashboard.css"
+import React from 'react';
+// import "../styles/dashboard.css"
 
 const Dashboard = () => {
   return (
@@ -52,28 +52,36 @@ const Dashboard = () => {
                 <td>ferdie@gmail.com</td>
                 <td>14/02/2024</td>
                 <td className="status threat">Threat</td>
-                <td><button className="download-btn">Download</button></td>
+                <td>
+                  <button className="download-btn">Download</button>
+                </td>
               </tr>
               <tr>
                 <td>Carla</td>
                 <td>vwhite@yahoo.com</td>
                 <td>14/02/2024</td>
                 <td className="status safe">Safe</td>
-                <td><button className="download-btn">Download</button></td>
+                <td>
+                  <button className="download-btn">Download</button>
+                </td>
               </tr>
               <tr>
                 <td>Thornton</td>
                 <td>fmartin@aol.com</td>
                 <td>14/02/2024</td>
                 <td className="status safe">Safe</td>
-                <td><button className="download-btn">Download</button></td>
+                <td>
+                  <button className="download-btn">Download</button>
+                </td>
               </tr>
               <tr>
                 <td>Murdock</td>
                 <td>anguyen@outlook.com</td>
                 <td>14/02/2024</td>
                 <td className="status threat">Threat</td>
-                <td><button className="download-btn">Download</button></td>
+                <td>
+                  <button className="download-btn">Download</button>
+                </td>
               </tr>
             </tbody>
           </table>

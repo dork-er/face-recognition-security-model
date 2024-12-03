@@ -1,7 +1,6 @@
-// src/components/LandingPage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/landingPage.css';
+import '../styles/landing.css';
 
 const LandingPage = () => {
   return (
